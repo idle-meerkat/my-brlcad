@@ -70,8 +70,8 @@ static int regions_converted = 0;
 static int regions_written = 0;
 static int cur_region = 0;
 static int tot_regions = 0;
-static long tot_polygons = 0;
-static long tot_vertices = 0;
+static size_t tot_polygons = 0;
+static size_t tot_vertices = 0;
 
 
 static struct bu_hash_entry *

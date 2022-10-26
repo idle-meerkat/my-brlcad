@@ -403,8 +403,8 @@ rem_read(register struct fb *ifp, int x, int y, unsigned char *pixelp, size_t nu
     /* Get response;  0 len means failure */
     ret = pkg_waitfor(MSG_RETURN, (char *)pixelp, num*sizeof(RGBpixel), PCP(ifp));
     if (ret <= 0) {
-	fb_log("rem_read: read %lu at <%d, %d> failed, ret=%ld.\n",
-	       num, x, y, ret);
+	fb_log("rem_read: read %zu at <%d, %d> failed, ret=%jd.\n",
+	       num, x, y, (intmax_t)ret);
 	return -3;
     }
     return ret/sizeof(RGBpixel);

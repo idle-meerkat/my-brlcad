@@ -228,7 +228,7 @@ typedef ptrdiff_t ssize_t;
 #  define fstat _fstat
 #  define stat  _stat
 #else
-#  define b_off_t off_t
+#  define b_off_t intptr_t
 #endif
 
 /**
